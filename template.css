@@ -58,7 +58,7 @@ li{
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 1;
-        grid-row-end: 50;
+        grid-row-end: 200;
         margin-top: 280px;
         box-shadow: 4px 2px 22px #333333;
 
@@ -84,13 +84,13 @@ li{
         height:250px;
         grid-column-start: 2;
         grid-column-end: 3;
-        grid-row-start: 17;
-        grid-row-end: 20;
+        grid-row-start: 100;
+        grid-row-end: 102;
         border-radius: 12px;
-
         opacity: 95%;
         margin-left: 30px;
         padding: 10px;
+        margin-top: 70px;
 
     }
 
