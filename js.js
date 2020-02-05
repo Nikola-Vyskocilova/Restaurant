@@ -8,7 +8,7 @@ console.log(aCopy)
 aCopy.querySelector("h2").textContent = "Cabanossi with beetrootcreme";
 aCopy.querySelector("p").textContent = "Cabanossi med rødbedecreme og creme er egentlig en forret, men kammerat Vladimir elskede denne ret så højt, ";
 
-const whosYourDaddy = document.querySelector("main");
+const whosYourDaddy = document.querySelector("template").parentNode;
 
 whosYourDaddy.appendChild(aCopy);
 

@@ -61,34 +61,25 @@ li{
         grid-row-end: 200;
         margin-top: 280px;
         box-shadow: 4px 2px 22px #333333;
+        padding: 40px;
 
     }
      .template{
         background-color: white;
         width:650px;
         height:250px;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 10;
-        grid-row-end: 12;
         border-radius: 12px;
-
         opacity: 95%;
-        margin-left: 30px;
         padding: 10px;
+       display: flex;
 
     }
      .template2{
         background-color: white;
         width:650px;
         height:250px;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 100;
-        grid-row-end: 102;
         border-radius: 12px;
         opacity: 95%;
-        margin-left: 30px;
         padding: 10px;
         margin-top: 70px;
 
@@ -106,30 +97,19 @@ li{
          visibility: visible;
         background-color: white;
         box-shadow: 4px 2px 22px #333333;
+
+
         }
     }
 
 
 
     .saletag{
-        float: right;
+
         padding-bottom: 600px;
     }
     button{
-       margin-left: 250px;
         width:100px;
-
-    }
-    h2{
-        padding-left: 250px;
-
-    }
-    h4{
-        padding-left: 250px;
-    }
-    p{
-
-       padding-left: 250px;
     }
     .headpicture{
         grid-column-start: 1;
@@ -144,11 +124,10 @@ li{
         grid-row-end: 2;
 
     }
-
-
+    .cabanossi{
+       display:inline-block;
 
 }
-
 @media only screen and (max-width:600px){
     body {
         display: grid;
