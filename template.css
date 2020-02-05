@@ -16,9 +16,16 @@ ul{
         justify-content: center;
 
 }
+.readmore{
+    text-decoration: underline;
+}
 
 li{
      margin:  10px;
+}
+
+.sale{
+    text-decoration: line-through;
 }
 
 @media only screen and (min-width:900px){
@@ -59,20 +66,60 @@ li{
      .template{
         background-color: white;
         width:650px;
-        height:200px;
+        height:250px;
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 10;
         grid-row-end: 12;
         border-radius: 12px;
-        box-shadow: 4px 2px 22px #333333;
+
+        opacity: 95%;
+        margin-left: 30px;
+        padding: 10px;
+
+    }
+     .template2{
+        background-color: white;
+        width:650px;
+        height:250px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 17;
+        grid-row-end: 20;
+        border-radius: 12px;
+
         opacity: 95%;
         margin-left: 30px;
         padding: 10px;
 
     }
 
+    .hidden{
+      visibility: hidden;
+    }
+    .hidden.show{
+        animation: show 1s forwards;
 
+    }
+    @keyframes show{
+        to{
+         visibility: visible;
+        background-color: white;
+        box-shadow: 4px 2px 22px #333333;
+        }
+    }
+
+
+
+    .saletag{
+        float: right;
+        padding-bottom: 600px;
+    }
+    button{
+       margin-left: 250px;
+        width:100px;
+
+    }
     h2{
         padding-left: 250px;
 
