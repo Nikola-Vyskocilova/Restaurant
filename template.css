@@ -1,0 +1,115 @@
+body{
+    background-color:#efeded;
+}
+
+.headpicture{
+        text-align: center;
+    }
+.active{
+    text-decoration: underline #27236f;
+
+}
+ul{
+     list-style-type: none;
+        flex-flow: row;
+        display: flex;
+        justify-content: center;
+
+}
+
+li{
+     margin:  10px;
+}
+
+@media only screen and (min-width:900px){
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-areas: "header header header"
+            "main main main"
+            "footer footer footer ";
+
+}
+     header{
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+
+    }
+
+     main{
+
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+      .background{
+        background-color:#27236f;
+        border-radius: 12px;
+        width:600px;
+        height: 700px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 50;
+        margin-top: 280px;
+        box-shadow: 4px 2px 22px #333333;
+
+    }
+     .template{
+        background-color: white;
+        width:650px;
+        height:200px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 10;
+        grid-row-end: 12;
+        border-radius: 12px;
+        box-shadow: 4px 2px 22px #333333;
+        opacity: 95%;
+        margin-left: 30px;
+        padding: 10px;
+
+    }
+
+
+    h2{
+        padding-left: 250px;
+
+    }
+    h4{
+        padding-left: 250px;
+    }
+    p{
+
+       padding-left: 250px;
+    }
+    .headpicture{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    nav{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+    }
+
+
+
+}
+
+@media only screen and (max-width:600px){
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "header"
+            "main"
+            "footer";
+        padding: 20px;
+
+    }
+}
