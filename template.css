@@ -37,6 +37,15 @@ li{
             "footer footer footer ";
 
 }
+    h2{
+        color:white;
+    }
+    #wrapper{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 200;
+    }
      header{
         grid-area: header;
         display: grid;
@@ -54,7 +63,7 @@ li{
         background-color:#27236f;
         border-radius: 12px;
         width:600px;
-        height: 700px;
+        height: 9150px;
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 1;
@@ -65,6 +74,102 @@ li{
 
     }
      .template{
+        background-color: white;
+        width:650px;
+        height:270px;
+        border-radius: 12px;
+        opacity: 95%;
+        padding: 10px;
+       display: flex;
+        margin-bottom:50px;
+
+    }
+
+    .hidden{
+        visibility: hidden;
+     position: absolute;
+        bottom:0;
+        width:650px;
+    }
+    .hidden.show{
+        animation: show 1s forwards;
+
+    }
+    @keyframes show{
+        to{
+        visibility: visible;
+        background-color: white;
+        }
+
+    }
+
+    .text{
+        padding-left:20px;
+
+    }
+
+     .text2{
+        padding-left:20px;
+
+    }
+    button{
+        width:100px;
+    }
+    .headpicture{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    nav{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+    }
+    .cabanossi{
+      display: inline-block;
+
+}
+@media only screen and (max-width:600px){
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "header"
+            "main"
+            "footer";
+
+    }
+
+     header{
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+     main{
+
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+      .background{
+        background-color:#27236f;
+        border-radius: 12px;
+        width:100px;
+        height: 700px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 200;
+        margin-top: 280px;
+        box-shadow: 4px 2px 22px #333333;
+        padding: 40px;
+
+    }
+    .template{
         background-color: white;
         width:650px;
         height:250px;
@@ -85,57 +190,5 @@ li{
 
     }
 
-    .hidden{
-      visibility: hidden;
-    }
-    .hidden.show{
-        animation: show 1s forwards;
-
-    }
-    @keyframes show{
-        to{
-         visibility: visible;
-        background-color: white;
-        box-shadow: 4px 2px 22px #333333;
-
-
-        }
-    }
-
-
-
-    .saletag{
-
-        padding-bottom: 600px;
-    }
-    button{
-        width:100px;
-    }
-    .headpicture{
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-    nav{
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-
-    }
-    .cabanossi{
-       display:inline-block;
-
 }
-@media only screen and (max-width:600px){
-    body {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: "header"
-            "main"
-            "footer";
-        padding: 20px;
 
-    }
-}
