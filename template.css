@@ -5,12 +5,17 @@ body{
 .headpicture{
         text-align: center;
     }
-.active{
-    text-decoration: underline #27236f;
+a{
+    text-decoration: none;
+    margin:  10px;
+    font-size: 20px;
+    text-transform: capitalize;
+    color:#27236f;
+}
 
 }
-ul{
-     list-style-type: none;
+nav a{
+
         flex-flow: row;
         display: flex;
         justify-content: center;
@@ -19,14 +24,37 @@ ul{
 .readmore{
     text-decoration: underline;
 }
-
-li{
-     margin:  10px;
+#discount{
+    color:red;
+    font-size: 20px;
 }
 
-.sale{
+#crossed{
     text-decoration: line-through;
 }
+.saletag{
+    padding-left: 190px;
+}
+
+.hide {
+  display: none;
+}
+.modal-background {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #7c1f17;
+  margin: 1em;
+  padding: 2em;
+}
+
 
 @media only screen and (min-width:900px){
     body {
@@ -39,6 +67,9 @@ li{
 }
     h2{
         color:white;
+        text-align: center;
+        font-family: bahnschrift;
+        text-transform: capitalize;
     }
     #wrapper{
         grid-column-start: 1;
@@ -63,7 +94,7 @@ li{
         background-color:#27236f;
         border-radius: 12px;
         width:600px;
-        height: 9150px;
+        height: 9450px;
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 1;
@@ -132,6 +163,12 @@ li{
       display: inline-block;
 
 }
+    .image{
+        max-width: 50%;
+        max-height: 90%;
+
+
+    }
 @media only screen and (max-width:600px){
     body {
         display: grid;
@@ -178,17 +215,6 @@ li{
         padding: 10px;
        display: flex;
 
-    }
-     .template2{
-        background-color: white;
-        width:650px;
-        height:250px;
-        border-radius: 12px;
-        opacity: 95%;
-        padding: 10px;
-        margin-top: 70px;
-
-    }
 
 }
 

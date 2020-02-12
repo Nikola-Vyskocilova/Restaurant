@@ -1,13 +1,21 @@
-
+    const modal = document.querySelector(".modal-background");
+modal.addEventListener("click", () => {
+  modal.classList.add("hide");
+});
 
 fetch("https://kea-alt-del.dk/t5/api/categories")
 .then(function (response){
     return response.json()
 })
     .then(createSections)
+
 function createSections(data){
     console.log(data)
     data.forEach(function (oneSection){
+        const a = document.createElement("a");
+        a.setAttribute("href", `#${oneSection}`);
+        a.textContent = oneSection;
+        document.querySelector("#wrapper>header>nav").appendChild(a);
         const section = document.createElement("section");
         section.id = oneSection;
         const h2 = document.createElement("h2");
@@ -34,22 +42,31 @@ function showData(jsonData){
 }
 
 function showSingle(course){
+const imageName = course.image;
+    const base = "https://kea-alt-del.dk/t5/site/imgs/";
+    const smallImg = base + "small/" + imageName + "-sm.jpg";
+     const template = document.querySelector("#dishTemplate").content;
+    const aCopy = template.cloneNode(true);
+
     console.log(course)
-const template = document.querySelector("template").content;
+ console.log(template)
 
-console.log(template)
 
-const aCopy = template.cloneNode(true);
-console.log(aCopy)
+console.log(aCopy);
+
+
 
 aCopy.querySelector("h3").textContent = course.name;
 aCopy.querySelector("h5").textContent = course.shortdescription;
 aCopy.querySelector("p.long").textContent = course.longdescription;
 aCopy.querySelector("p span.price").textContent = course.price;
+aCopy.querySelector("p span.pricecrossed").textContent=course.price;
+    aCopy.querySelector(".image").src =smallImg;
 
     if (course.discount){
-       aCopy.querySelector("p span.discount").textContent=course.price;
         const newPrice = Math.round(course.price - course.price * course.discount / 100);
+         aCopy.querySelector("p span.discount").textContent=newPrice;
+        aCopy.querySelector("#originalPrice").remove();
 
     }
     else{
@@ -57,8 +74,23 @@ aCopy.querySelector("p span.price").textContent = course.price;
         aCopy.querySelector("p span.price").textContent = course.price
     }
 
+
+  aCopy.querySelector("button").addEventListener("click", () => {
+    fetch(`https://kea-alt-del.dk/t5/api/product?id=${course.id}`)
+      .then(res => res.json())
+      .then(showDetails);
+  });
+
 console.log(`#${course.category}`)
 document.querySelector(`#${course.category}`).appendChild(aCopy);
+
+ }
+function showDetails(data) {
+  modal.querySelector(".modal-name").textContent = data.name;
+  modal.querySelector(".modal-description").textContent = data.longdescription;
+  //...
+  modal.classList.remove("hide");
+
 /*const whosYourDaddy = document.querySelector("template").parentNode;
 
 whosYourDaddy.appendChild(aCopy);
