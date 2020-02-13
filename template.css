@@ -73,6 +73,7 @@ button:hover {
         text-align: center;
         font-family: bahnschrift;
         text-transform: capitalize;
+
     }
 
     .text{
@@ -81,13 +82,15 @@ button:hover {
     }
 
 
-
-    .opacity{
-        opacity: 10%;
-    }
-
-
-
+.filter{
+    opacity: 30%;
+}
+.soldOut{
+    color: red;
+    position: absolute;
+    transform: rotate(340deg);
+    letter-spacing: 12px;
+}
 
 @media screen and (min-width: 900px) {
      main{
@@ -154,6 +157,11 @@ button:hover {
         height:auto;
 
     }
+    .soldOut{
+    font-size: 50px;
+    margin-left: 60px;
+        padding-top: 30px;
+}
 }
 
 
@@ -226,5 +234,10 @@ button:hover {
     button {
     width: 100px;
 
+}
+    .soldOut{
+    font-size: 40px;
+    margin-left: 20px;
+    padding-top: 50px;
 }
 }
