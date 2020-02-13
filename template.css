@@ -1,10 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
 body{
     background-color:#efeded;
 }
 
-.headpicture{
-        text-align: center;
-    }
+
 a{
     text-decoration: none;
     margin:  10px;
@@ -12,7 +13,6 @@ a{
     text-transform: capitalize;
     color:#27236f;
 }
-
 }
 nav a{
 
@@ -21,9 +21,25 @@ nav a{
         justify-content: center;
 
 }
-.readmore{
-    text-decoration: underline;
+
+
+button {
+    background-color: #F7CA18;
+    border-color: #F7CA18;
+    width: 300px;
+    height:30px;
+    border-radius: 10px;
+    transition: all 0.15s ease 0s;
 }
+
+button:hover {
+    background-color: white;
+    color: #F7CA18;
+     border-color: #F7CA18;
+    font-weight: bold;
+}
+
+
 #discount{
     color:red;
     font-size: 20px;
@@ -32,11 +48,9 @@ nav a{
 #crossed{
     text-decoration: line-through;
 }
-.saletag{
-    padding-left: 190px;
-}
 
-.hide {
+
+    .hide {
   display: none;
 }
 .modal-background {
@@ -54,42 +68,35 @@ nav a{
   margin: 1em;
   padding: 2em;
 }
-
-
-@media only screen and (min-width:900px){
-    body {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
-        grid-template-areas: "header header header"
-            "main main main"
-            "footer footer footer ";
-
-}
     h2{
         color:white;
         text-align: center;
         font-family: bahnschrift;
         text-transform: capitalize;
     }
-    #wrapper{
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 200;
-    }
-     header{
-        grid-area: header;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
+
+    .text{
+        padding-left:20px;
 
     }
 
+
+
+    .opacity{
+        opacity: 10%;
+    }
+
+
+
+
+@media screen and (min-width: 900px) {
      main{
 
         grid-area: main;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-columns: 1fr 1fr 1fr;
     }
+
       .background{
         background-color:#27236f;
         border-radius: 12px;
@@ -115,42 +122,12 @@ nav a{
         margin-bottom:50px;
 
     }
-
-    .hidden{
-        visibility: hidden;
-     position: absolute;
-        bottom:0;
-        width:650px;
-    }
-    .hidden.show{
-        animation: show 1s forwards;
-
-    }
-    @keyframes show{
-        to{
-        visibility: visible;
-        background-color: white;
-        }
-
-    }
-
-    .text{
-        padding-left:20px;
-
-    }
-
-     .text2{
-        padding-left:20px;
-
-    }
-    button{
-        width:100px;
-    }
-    .headpicture{
+        .headpicture{
         grid-column-start: 1;
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 2;
+
     }
     nav{
         grid-column-start: 2;
@@ -159,44 +136,53 @@ nav a{
         grid-row-end: 2;
 
     }
-    .cabanossi{
-      display: inline-block;
 
-}
-    .image{
-        max-width: 50%;
-        max-height: 90%;
-
-
+    #wrapper{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 200;
     }
-@media only screen and (max-width:600px){
-    body {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: "header"
-            "main"
-            "footer";
-
-    }
-
      header{
         grid-area: header;
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr ;
 
     }
+     .image{
+        max-width: 50%;
+        height:auto;
 
-     main{
+    }
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    #wrapper{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 200;
+    }
+     header{
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 1fr ;
+
+    }
+    main{
 
         grid-area: main;
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
       .background{
         background-color:#27236f;
         border-radius: 12px;
-        width:100px;
-        height: 700px;
+        width:400px;
+        height: 9770px;
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 1;
@@ -206,15 +192,39 @@ nav a{
         padding: 40px;
 
     }
+      .headpicture{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+           max-width: 10%;
+
+    }
     .template{
         background-color: white;
-        width:650px;
-        height:250px;
+        width:400px;
+        height:285px;
         border-radius: 12px;
         opacity: 95%;
         padding: 10px;
        display: flex;
+        margin-bottom:50px;
 
+    }
+
+    .image{
+        max-width: 50%;
+        max-height: 50%;
+      display: block;
+    padding-top: 15%;
+
+    }
+    #discount{
+    color:red;
+    font-size: 18px;
+}
+    button {
+    width: 100px;
 
 }
-
+}

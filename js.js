@@ -62,6 +62,8 @@ aCopy.querySelector("p.long").textContent = course.longdescription;
 aCopy.querySelector("p span.price").textContent = course.price;
 aCopy.querySelector("p span.pricecrossed").textContent=course.price;
     aCopy.querySelector(".image").src =smallImg;
+aCopy.querySelector("p span.alcohol").textContent = course.alcohol;
+
 
     if (course.discount){
         const newPrice = Math.round(course.price - course.price * course.discount / 100);
@@ -72,6 +74,29 @@ aCopy.querySelector("p span.pricecrossed").textContent=course.price;
     else{
         aCopy.querySelector(".sale").remove()
         aCopy.querySelector("p span.price").textContent = course.price
+         aCopy.querySelector(".tag").remove()
+
+    }
+
+    if (course.alcohol>0){
+        aCopy.querySelector("p span.alcohol").textContent = course.alcohol;
+    }
+else{
+        aCopy.querySelector("#alcohol").remove();
+    }
+
+if (course.vegetarian){
+       aCopy.querySelector(".vegetarian");
+    }
+    else{
+         aCopy.querySelector(".vegetarian").remove();
+    }
+
+    if(course.soldout == "false"){
+        aCopy.querySelector(".opacity").remove();
+    }
+    else{
+        aCopy.querySelector(".opacity");
     }
 
 
