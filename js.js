@@ -93,16 +93,16 @@ if (course.vegetarian){
     }
 
     if(course.soldout){
-        aCopy.querySelector(".image").classList.add("filter");
-        aCopy.querySelector("button").classList.add("filter");
-        aCopy.querySelector(".text").classList.add("filter");
+        aCopy.querySelector(".image").classList.add("opacity");
+        aCopy.querySelector("button").classList.add("opacity");
+        aCopy.querySelector(".text").classList.add("opacity");
        aCopy.querySelector(".soldOut");
 
     }
     else{
-         aCopy.querySelector(".image").classList.remove("filter");
-        aCopy.querySelector("button").classList.remove("filter");
-         aCopy.querySelector(".text").classList.remove("filter");
+         aCopy.querySelector(".image").classList.remove("opacity");
+        aCopy.querySelector("button").classList.remove("opacity");
+         aCopy.querySelector(".text").classList.remove("opacity");
         aCopy.querySelector(".soldOut").remove();
 
     }
